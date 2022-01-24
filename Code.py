@@ -8,7 +8,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 from web import form
 import pymysql
-db = web.database(dbn='mysql', user='root', pw='123456', db='ts_history_data')
+db = web.database(dbn='mysql', user='****', pw='*****', db='********')
 render = web.template.render('templates/')
 
 urls = (
