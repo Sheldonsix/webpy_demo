@@ -1,5 +1,5 @@
 # webpy_demo
-Securities data analysis demo by webpy
+Securities data analysis demo by webpy and tushare api.
 
 ## 文件结构
 - data.py： 从 `tushare` 接口导入数据到 `MySQL` 数据库
