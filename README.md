@@ -3,6 +3,8 @@ Securities data analysis demo by webpy and tushare api.
 
 基于 webpy 和 tushare 的证券数据分析。
 
+tushare ID：478647
+
 ## 文件结构
 - data.py： 从 `tushare` 接口导入数据到 `MySQL` 数据库
 - Code.py:：`web.py` 运行的主文件，其中功能类包含实现的算法
