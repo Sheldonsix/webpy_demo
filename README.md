@@ -41,7 +41,7 @@ Securities data analysis demo by webpy and tushare api.
 
 ## 交互界面
 ![image](https://user-images.githubusercontent.com/42886406/150705954-a2deb284-033b-4c38-bf46-8fa1882f53c8.png)
-## 结果界面
+## 输出界面
 ![image](https://user-images.githubusercontent.com/42886406/150705991-9b0d7910-202f-4063-a1b9-37ef1c356234.png)
 
 ## TODO
