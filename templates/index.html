@@ -1,0 +1,44 @@
+$def with (settings, results)
+
+
+<p>用户设定</p>
+<ul>
+    <li>股票代码：$settings['股票代码']</li>
+    <li>交易日期：$settings['交易日期']</li>
+    <li>上涨点数：$settings['上涨点数']</li>
+    <li>回落点数：$settings['回落点数']</li>
+</ul>
+
+<p>查询结果</p>
+<div>
+    <ul>
+        <li>所选日期的最高价：$results['max']</li>
+        <li>所选日期的最低价：$results['min']</li>
+        <li>所选日期的开盘价：$results['opening']</li>
+        <li>所选日期的收盘价：$results['closing']</li>
+        <li>所选日期的成交量：$results['volume']</li>
+        <li>所选日期的所在波段的最高价：$results['band_max']</li>
+        <li>所选日期的上一天的收盘价：$results['yesterday_closing']</li>
+        <li>上一波段的最低价：$results['pre_min']</li>
+        <li>上一波段的最高价：$results['pre_max']</li>
+        <li>上一波段的最高开盘价：$results['pre_max_opening']</li>
+        <li>上一波段的最低开盘价：$results['pre_min_opening']</li>
+        <li>上一波段的平均开盘价：$results['pre_avg_opening']</li>
+        <li>上一波段的最高成交量：$results['pre_max_volume']</li>
+        <li>上一波段的最低成交量：$results['pre_min_volume']</li>
+        <li>上一波段的平均成交量：$results['pre_avg_volume']</li>
+        <li>向上的可信指数：$results['up_credibility']</li>
+        <li>斜率：$results['up_slop']</li>
+        <li>向下的可信指数：$results['down_credibility']</li>
+        <li>斜率：$results['down_slop']</li>
+        $if results['max'] < results['band_max'] * (1 - (int(settings['回落点数']) / 100)):
+            <li>已经回落了 $int(settings['回落点数']) %，回落了 $results['fallback_points'] 点</li>
+        $else:
+            <li>未达到设置的回落点，回落 $results['fallback_points'] 点</li>
+        $if results['opening'] < results['yesterday_closing'] * (1 - (int(settings['上涨点数']) / 100)):
+            <li>已经上涨了 $int(settings['上涨点数']) %，上涨了 $results['fallback_points'] 点</li>
+        $else:
+            <li>未达到设置的上涨点，上涨 $results['up_points'] 点</li>
+    </ul>
+
+</div>
