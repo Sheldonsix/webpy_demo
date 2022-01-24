@@ -6,7 +6,7 @@ Securities data analysis demo by webpy
 
 |编程环境||
 | :--: | :--: |
-| 语言 | python |
+| 语言 | Python |
 | ide | PyCharm |
 | 系统 | Windows10 |
 | 数据接口 | [tushare](https://tushare.pro/) |
